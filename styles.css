@@ -1,0 +1,363 @@
+/* Paleta personalizada */
+/* Paleta personalizada */
+:root {
+  --verde-profundo: #00983d;
+  --verde-lima: #a7c405;
+  --amarillo: #fbe22f;
+  --gris-fondo: #f4f4f4;
+  --blanco: #ffffff;
+}
+
+/* RESET GENERAL */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--gris-fondo);
+  color: #333;
+  line-height: 1.6;
+}
+
+/* HEADER */
+
+/* SECCIONES */
+section {
+  background-color: var(--blanco);
+  margin: 30px auto;
+  max-width: 900px;
+  padding: 30px;
+  border-left: 8px solid var(--verde-lima);
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+h2 {
+  color: var(--verde-profundo);
+  margin-bottom: 15px;
+  font-size: 30px;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul li {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+/* LINKS */
+a {
+  color: var(--verde-profundo);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* FOOTER */
+footer {
+  background-color: var(--verde-profundo);
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 30px;
+}
+section {
+  scroll-margin-top: 120px;
+}
+#inicio {
+  scroll-margin-top: 160px;
+  padding-top: 30px;
+}
+
+.ancla-fija {
+  display: block;
+  height: 160px;
+  margin-top: -160px;
+  font-size: 0;
+  line-height: 0;
+  pointer-events: none;
+  user-select: none;
+}
+
+section[id]::before {
+  content: "";
+  display: block;
+  height: 120px; /* ajusta según tu header */
+  margin-top: -120px;
+  visibility: hidden;
+  pointer-events: none;
+  user-select: none;
+}
+
+section[id]:focus {
+  outline: none;
+}
+
+#galeria {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: white;
+  border-left: 8px solid var(--verde-lima);
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+#galeria h2 {
+  color: var(--verde-profundo);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.galeria-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.galeria-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.galeria-grid img:hover {
+  transform: scale(1.05);
+}
+
+
+/* Banner */
+.banner {
+background-image: url("images/banner1.jpg");
+background-size: cover;
+background-position: center;
+height: 400px;
+display: flex;
+align-items: center;
+justify-content: 
+center;
+position: relative;
+overflow: hidden; 
+}
+
+
+.banner-texto {
+position: relative;
+color: white;
+text-align: center;
+z-index: 2;
+}
+
+.banner-texto h1 {
+  font-size: 42px;
+  color: #fbe22f; /* amarillo de tu paleta */
+  font-weight: 900;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+  margin-bottom: 20px;
+}
+
+.banner-texto p {
+  font-size: 22px;
+  font-weight: 600;
+  color: white;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* NUEVA barra de menú */
+.barra-verde {
+background-color: white;
+border-bottom: 4px solid #fbe22f;
+padding: 1px 0;
+}
+
+
+.contenedor-menu {
+display: flex;
+align-items: center;
+justify-content: space-around; /* uno a la izquierda, otro a la derecha */
+max-width: 1100px;
+margin: 0 auto;
+padding: 0px 30px;
+gap: 40px;
+}
+
+
+.logo img {
+height: 170px; /* puedes ajustar esto si lo ves muy grande o pequeño */
+}
+
+.menu {
+display: flex;
+gap: 30px;
+background-color: #00983d;
+padding: 12px 30px;
+border-radius: 20px;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+.menu a {
+color: white;
+text-decoration: none;
+font-weight: bold;
+font-size: 16px;
+transition: color 0.3s ease;
+}
+
+.menu a:hover {
+color: #fbe22f; /* amarillo de la paleta */
+}
+
+.servicios-grid {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.servicio-item {
+  flex: 1 1 300px;
+  text-align: center;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.servicio-item img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+}
+
+.servicio-item p {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+
+
+
+.servicio-item img:hover {
+  transform: scale(1.05);
+}
+
+
+
+#servicios {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 30px;
+  background-color: white;
+  border-left: 8px solid var(--verde-lima);
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+#servicios h2 {
+  color: var(--verde-profundo);
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.servicio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.servicio img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.1);
+  margin-bottom: 10px;
+}
+
+#materiales {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 30px;
+  background-color: white;
+  border-left: 8px solid var(--verde-lima);
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+#materiales h2 {
+  color: var(--verde-profundo);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.materiales-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.material-item {
+  flex: 1 1 300px;
+  max-width: 300px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.material-item img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.material-item img:hover {
+  transform: scale(1.05);
+}
+
+.material-item p {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 999;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-float img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+
+
