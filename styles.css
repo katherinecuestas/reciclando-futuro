@@ -24,6 +24,7 @@ body {
 /* HEADER */
 
 /* SECCIONES */
+
 section {
   background-color: var(--gris-fondo);
   margin: 30px auto;
@@ -32,7 +33,9 @@ section {
   border-left: 8px solid var(--verde-lima);
   border-radius: 10px;
   box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  scroll-margin-top: 140px; /* <-- Esto compensa el menú fijo */
 }
+
 
 h2 {
   color: var(--verde-profundo);
@@ -87,15 +90,7 @@ section {
   user-select: none;
 }
 
-section[id]::before {
-  content: "";
-  display: block;
-  height: 200px; /* ajusta según tu header */
-  margin-top: -200px;
-  visibility: hidden;
-  pointer-events: none;
-  user-select: none;
-}
+
 
 section[id]:focus {
   outline: none;
