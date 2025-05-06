@@ -1,9 +1,8 @@
-/* Paleta personalizada */
 :root {
   --verde-profundo: #00983d;
   --verde-lima: #a7c405;
   --amarillo: #fbe22f;
- --gris-fondo: #f4f4f4;
+  --gris-fondo: #f4f4f4;
   --blanco: #ffffff;
 }
 
@@ -21,10 +20,7 @@ body {
   line-height: 1.6;
 }
 
-/* HEADER */
-
 /* SECCIONES */
-
 section {
   background-color: var(--gris-fondo);
   margin: 30px auto;
@@ -33,16 +29,35 @@ section {
   border-left: 8px solid var(--verde-lima);
   border-radius: 10px;
   box-shadow: 0 0 8px rgba(0,0,0,0.1);
-  scroll-margin-top: 140px; /* <-- Esto compensa el menú fijo */
+  scroll-margin-top: 140px;
 }
 
+section[id]::before {
+  content: "";
+  display: block;
+  height: 140px;
+  margin-top: -140px;
+  visibility: hidden;
+  pointer-events: none;
+  user-select: none;
+}
 
+section[id]:focus {
+  outline: none;
+}
+
+section h2 {
+  margin-top: 0;
+}
+
+/* ENCABEZADOS */
 h2 {
   color: var(--verde-profundo);
   margin-bottom: 15px;
   font-size: 30px;
 }
 
+/* LISTAS */
 ul {
   list-style: none;
   padding-left: 0;
@@ -72,59 +87,30 @@ footer {
   padding: 15px;
   margin-top: 30px;
 }
-section {
-  scroll-margin-top: 120px;
-}
-#inicio {
-  scroll-margin-top: 160px;
-  padding-top: 30px;
-}
 
-.ancla-fija {
-  display: block;
-  height: 160px;
-  margin-top: -160px;
-  font-size: 0;
-  line-height: 0;
-  pointer-events: none;
-  user-select: none;
-}
-
-
-
-section[id]:focus {
-  outline: none;
-}
-section h2 {
-  margin-top: 0;
-}
-
-
-/* Banner */
+/* BANNER */
 .banner {
-background-image: url("images/banner1.jpg");
-background-size: cover;
-background-position: center;
-height: 400px;
-display: flex;
-align-items: center;
-justify-content: 
-center;
-position: relative;
-overflow: hidden; 
+  background-image: url("images/banner1.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden; 
 }
-
 
 .banner-texto {
-position: relative;
-color: white;
-text-align: center;
-z-index: 2;
+  position: relative;
+  color: white;
+  text-align: center;
+  z-index: 2;
 }
 
 .banner-texto h1 {
   font-size: 42px;
-  color: #fbe22f; /* amarillo de tu paleta */
+  color: var(--amarillo);
   font-weight: 900;
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
   margin-bottom: 20px;
@@ -136,6 +122,8 @@ z-index: 2;
   color: white;
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
 }
+
+/* HEADER */
 .barra-verde {
   background-color: var(--gris-fondo);
   border-bottom: 4px solid var(--amarillo);
@@ -146,49 +134,56 @@ z-index: 2;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-
-/* NUEVA barra de menú */
-/*.barra-verde {
-background-color: white;
-border-bottom: 4px solid #fbe22f;
-padding: 1px 0;
-}*/
-
 .contenedor-menu {
-display: flex;
-align-items: center;
-justify-content: space-around; /* uno a la izquierda, otro a la derecha */
-max-width: 1100px;
-margin: 0 auto;
-padding: 0px 30px;
-gap: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0px 30px;
+  gap: 40px;
 }
 
-
 .logo img {
-height: 170px; /* puedes ajustar esto si lo ves muy grande o pequeño */
+  height: 170px;
 }
 
 .menu {
-display: flex;
-gap: 30px;
-background-color: #00983d;
-padding: 12px 30px;
-border-radius: 20px;
-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  gap: 30px;
+  background-color: var(--verde-profundo);
+  padding: 12px 30px;
+  border-radius: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-
 .menu a {
-color: white;
-text-decoration: none;
-font-weight: bold;
-font-size: 16px;
-transition: color 0.3s ease;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  transition: color 0.3s ease;
 }
 
 .menu a:hover {
-color: #fbe22f; /* amarillo de la paleta */
+  color: var(--amarillo);
+}
+
+/* SERVICIOS */
+#servicios {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 30px;
+  background-color: white;
+  border-left: 8px solid var(--verde-lima);
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+#servicios h2 {
+  color: var(--verde-profundo);
+  margin-bottom: 30px;
+  text-align: center;
 }
 
 .servicios-grid {
@@ -222,45 +217,11 @@ color: #fbe22f; /* amarillo de la paleta */
   color: #333;
 }
 
-
-
 .servicio-item img:hover {
   transform: scale(1.05);
 }
 
-
-
-#servicios {
-  max-width: 900px;
-  margin: 30px auto;
-  padding: 30px;
-  background-color: white;
-  border-left: 8px solid var(--verde-lima);
-  border-radius: 10px;
-  box-shadow: 0 0 8px rgba(0,0,0,0.1);
-}
-
-#servicios h2 {
-  color: var(--verde-profundo);
-  margin-bottom: 30px;
-  text-align: center;
-}
-
-.servicio {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 30px;
-}
-
-.servicio img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 0 6px rgba(0,0,0,0.1);
-  margin-bottom: 10px;
-}
-
+/* MATERIALES */
 #materiales {
   max-width: 900px;
   margin: 30px auto;
@@ -310,14 +271,15 @@ color: #fbe22f; /* amarillo de la paleta */
   font-size: 16px;
   font-weight: 600;
   color: #333;
-  
 }
+
+/* NOSOTROS */
 #nosotros h2 {
   text-align: center;
-  font-size: 32px;       /* Tamaño ajustado */
-  margin-bottom: 20px;   /* Espaciado debajo del título */
-  font-weight: 900;      /* Negrita fuerte */
-  color: var(--verde-profundo); /* Mantener el color institucional */
+  font-size: 32px;
+  margin-bottom: 20px;
+  font-weight: 900;
+  color: var(--verde-profundo);
 }
 
 #nosotros p {
@@ -326,8 +288,7 @@ color: #fbe22f; /* amarillo de la paleta */
   line-height: 1.8;
 }
 
-
-
+/* WHATSAPP FLOAT */
 .whatsapp-float {
   position: fixed;
   bottom: 25px;
@@ -350,15 +311,15 @@ color: #fbe22f; /* amarillo de la paleta */
 
 /* MODALES */
 .modal {
-  display: none; 
-  position: fixed; 
+  display: none;
+  position: fixed;
   z-index: 1000;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  overflow: auto; 
-  background-color: rgba(0,0,0,0.6); 
+  overflow: auto;
+  background-color: rgba(0,0,0,0.6);
 }
 
 .modal-content {
@@ -380,7 +341,7 @@ color: #fbe22f; /* amarillo de la paleta */
 .modal-content h3 {
   margin-bottom: 15px;
   font-size: 24px;
-  color: #00983d;
+  color: var(--verde-profundo);
   font-weight: bold;
 }
 
@@ -403,4 +364,3 @@ color: #fbe22f; /* amarillo de la paleta */
 .close:hover {
   color: red;
 }
-
