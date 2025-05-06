@@ -373,28 +373,44 @@ color: #fbe22f; /* amarillo de la paleta */
 }
 
 .modal-content {
-  background-color: #fff;
+  background-color: #ffffff;
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: 30px;
-  border-radius: 10px;
+  padding: 40px 30px;
+  border-radius: 20px;
   max-width: 500px;
   width: 90%;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
   z-index: 1001;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
 }
 
+.modal-content h3 {
+  margin-bottom: 15px;
+  font-size: 24px;
+  color: #00983d;
+  font-weight: bold;
+}
+
+.modal-content p {
+  font-size: 18px;
+  color: #444;
+  line-height: 1.5;
+}
 
 .close {
-  color: #aaa;
+  color: #888;
   position: absolute;
   right: 15px;
-  top: 10px;
+  top: 15px;
   font-size: 24px;
   cursor: pointer;
+  transition: color 0.3s ease;
 }
+
 .close:hover {
   color: red;
 }
