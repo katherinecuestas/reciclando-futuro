@@ -1,10 +1,9 @@
 /* Paleta personalizada */
-/* Paleta personalizada */
 :root {
   --verde-profundo: #00983d;
   --verde-lima: #a7c405;
   --amarillo: #fbe22f;
- /* --gris-fondo: #f4f4f4;/*
+ --gris-fondo: #f4f4f4;
   --blanco: #ffffff;
 }
 
@@ -17,7 +16,7 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #ffffff;
+  background-color: var(--gris-fondo);
   color: #333;
   line-height: 1.6;
 }
@@ -26,7 +25,7 @@ body {
 
 /* SECCIONES */
 section {
-  background-color: var(--blanco);
+  background-color: var(--gris-fondo);
   margin: 30px auto;
   max-width: 900px;
   padding: 30px;
