@@ -138,25 +138,38 @@ Nuestro trabajo se basa en la rapidez, el buen trato y un firme compromiso con e
   <a href="https://wa.me/56974924231" class="whatsapp-float" target="_blank" title="Contáctanos por WhatsApp">
     <img src="images/whatsapp-icon.png" alt="WhatsApp">
   </a>
-  <script>
-  function abrirModal(id) {
-    document.getElementById(id).style.display = "block";
-  }
+  <!-- MODALES -->
+<div id="modal1" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="cerrarModal('modal1')">&times;</span>
+    <h3>Valorización de excedentes</h3>
+    <p>Compramos excedentes metálicos y cables eléctricos según tipo, estado y cantidad. Revisamos y pesamos en conjunto.</p>
+  </div>
+</div>
 
-  function cerrarModal(id) {
-    document.getElementById(id).style.display = "none";
-  }
+<div id="modal2" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="cerrarModal('modal2')">&times;</span>
+    <h3>Visita técnica</h3>
+    <p>Agendamos visitas para asesorarte en la correcta clasificación y gestión de tus excedentes industriales.</p>
+  </div>
+</div>
 
-  // Cerrar si se hace clic fuera del modal
-  window.onclick = function(event) {
-    const modales = document.querySelectorAll('.modal');
-    modales.forEach(function(modal) {
-      if (event.target === modal) {
-        modal.style.display = "none";
-      }
-    });
-  };
-</script>
+<div id="modal3" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="cerrarModal('modal3')">&times;</span>
+    <h3>Pesaje y retiro</h3>
+    <p>Vamos con pesas a tu instalación. Retiramos en terreno sin costo y entregamos comprobantes.</p>
+  </div>
+</div>
+
+<div id="modal4" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="cerrarModal('modal4')">&times;</span>
+    <h3>Facturación</h3>
+    <p>Emitimos factura a empresas y realizamos pagos mediante transferencia inmediata o efectivo.</p>
+  </div>
+</div>
 
 </body>
 </html>
