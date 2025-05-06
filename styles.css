@@ -141,7 +141,12 @@ z-index: 2;
   background-color: var(--gris-fondo);
   border-bottom: 4px solid var(--amarillo);
   padding: 1px 0;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
+
 
 /* NUEVA barra de menú */
 /*.barra-verde {
