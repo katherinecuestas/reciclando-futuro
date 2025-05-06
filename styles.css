@@ -359,3 +359,8 @@ footer {
 .close:hover {
   color: red;
 }
+
+
+html {
+  scroll-padding-top: 100px;
+}
