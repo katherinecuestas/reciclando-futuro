@@ -29,18 +29,13 @@ section {
   border-left: 8px solid var(--verde-lima);
   border-radius: 10px;
   box-shadow: 0 0 8px rgba(0,0,0,0.1);
-  scroll-margin-top: 140px;
 }
 
-section[id]::before {
-  content: "";
-  display: block;
-  height: 140px;
-  margin-top: -140px;
-  visibility: hidden;
-  pointer-events: none;
-  user-select: none;
+/* Este scroll-margin-top asegura que el título de cada sección no quede oculto bajo el menú fijo */
+section[id] {
+  scroll-margin-top: 140px; /* Ajusta según el alto de tu header */
 }
+
 
 section[id]:focus {
   outline: none;
