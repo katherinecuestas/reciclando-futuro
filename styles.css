@@ -338,6 +338,14 @@ color: #fbe22f; /* amarillo de la paleta */
   font-weight: 600;
   color: #333;
 }
+#nosotros h2 {
+  text-align: center;
+  font-size: 32px;       /* Tamaño ajustado */
+  margin-bottom: 20px;   /* Espaciado debajo del título */
+  font-weight: 900;      /* Negrita fuerte */
+  color: var(--verde-profundo); /* Mantener el color institucional */
+}
+
 
 .whatsapp-float {
   position: fixed;
