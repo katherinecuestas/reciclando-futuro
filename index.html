@@ -139,6 +139,25 @@ Nuestro trabajo se basa en la rapidez, el buen trato y un firme compromiso con e
     <p>Emitimos factura a empresas y realizamos pagos mediante transferencia inmediata o efectivo.</p>
   </div>
 </div>
+<script>
+  function abrirModal(id) {
+    document.getElementById(id).style.display = "block";
+  }
+
+  function cerrarModal(id) {
+    document.getElementById(id).style.display = "none";
+  }
+
+  // Cerrar si se hace clic fuera del contenido del modal
+  window.onclick = function(event) {
+    const modales = document.querySelectorAll('.modal');
+    modales.forEach(function(modal) {
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    });
+  };
+</script>
 
 </body>
 </html>
