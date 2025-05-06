@@ -90,8 +90,8 @@ section {
 section[id]::before {
   content: "";
   display: block;
-  height: 140px; /* ajusta según tu header */
-  margin-top: -140px;
+  height: 180px; /* ajusta según tu header */
+  margin-top: -180px;
   visibility: hidden;
   pointer-events: none;
   user-select: none;
