@@ -2,34 +2,57 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Blog | Reciclando Futuro</title>
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="styles.css">
- <!-- Usa tu mismo CSS -->
 </head>
 <body>
-  <header>
-    <h1>Blog de Reciclaje</h1>
-    <nav>
-      <a href="index.html">Inicio</a>
-      <a href="blog.html">Blog</a>
-    </nav>
+
+  <!-- Encabezado igual al index.html -->
+  <header class="barra-verde">
+    <div class="contenedor-menu">
+      <div class="logo">
+        <a href="index.html">
+          <img src="images/logo_RF.png" alt="Logo Reciclando Futuro">
+        </a>
+      </div>
+      <nav class="menu">
+        <a href="index.html#inicio">Inicio</a>
+        <a href="index.html#servicios">Servicios</a>
+        <a href="index.html#materiales">Materiales</a>
+        <a href="index.html#nosotros">¿Quiénes somos?</a>
+        <a href="index.html#contacto">Contacto</a>
+        <a href="blog.html">Blog</a>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <article>
-      <h2>¿Por qué reciclar cables con cobre?</h2>
+  <!-- Contenido del blog -->
+  <main style="max-width: 900px; margin: 30px auto; background-color: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+    <article style="margin-bottom: 40px;">
+      <img src="images/blog-cobre.jpg" alt="Cables con núcleo de cobre" style="width:100%; border-radius: 10px; margin-bottom: 20px;">
+      <h2 style="color: var(--verde-profundo); font-size: 1.8em;">¿Por qué reciclar cables con cobre?</h2>
       <p><strong>Fecha:</strong> Mayo 2025</p>
       <p>
-        Reciclar cables con núcleo de cobre ayuda a reducir residuos industriales, recuperar un material 100% reutilizable y además tiene un valor comercial importante. En Reciclando Futuro, retiramos tus excedentes de forma segura y con pago inmediato. En este blog te explicamos los beneficios concretos del reciclaje de cobre...
+        El reciclaje de cables con núcleo de cobre es una práctica clave para el cuidado del medioambiente y la economía circular. El cobre es un metal 100% reciclable que conserva todas sus propiedades, lo que permite reutilizarlo infinitas veces sin pérdida de calidad.
+      </p>
+      <p>
+        Al reciclar cables, no solo evitamos la acumulación de residuos peligrosos, sino que también recuperamos un material valioso. En Reciclando Futuro retiramos este tipo de excedentes directamente en terreno, con pesaje justo, revisión en conjunto y pago inmediato.
+      </p>
+      <p>
+        Además, nuestros procesos garantizan rapidez, confianza y transparencia. Si tienes cables acumulados, contacta con nosotros y únete a un modelo de reciclaje responsable.
       </p>
     </article>
-
-    <!-- Puedes duplicar <article> cada vez que subas un nuevo post -->
   </main>
 
+  <!-- Pie de página igual al index.html -->
   <footer>
     <p>&copy; 2025 Reciclando Futuro</p>
   </footer>
+
+  <a href="https://wa.me/56974924231" class="whatsapp-float" target="_blank" title="Contáctanos por WhatsApp">
+    <img src="images/whatsapp-icon.png" alt="WhatsApp">
+  </a>
+
 </body>
 </html>
